@@ -1,0 +1,155 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.filter-icon, .graph-icon {
+  font-size: 40px;
+  color: yellow;
+  cursor: pointer;
+}
+
+.graph-icon {
+  margin-left: 20px;
+}
+
+.filter-icon {
+  margin-right: 40px;
+}
+
+.graph-section, .filter-section {
+  position: absolute;
+  top: 60px;
+  height: calc(100% - 60px);
+  width: 30%;
+  background-color: #000;
+  border: 1px solid white;
+  border-radius: 5px;
+  overflow-y: auto;
+  padding: 20px;
+  z-index: 1;
+}
+
+.graph-section {
+  left: 0;
+}
+
+.filter-section {
+  right: 0;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.filter-form {
+  text-align: center;
+}
+
+.filter-form input, .filter-section button {
+  display: block;
+  height: 30px;
+  width: 80%;
+  margin: 25px auto;
+  padding: 0 20px;
+  font-size: 18px;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+.filter-section button {
+  height: 40px;
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.dataTable, .dataTableH1 {
+  position: relative;
+  top: 60px;
+  height: calc(100% - 60px);
+  width: 100%;
+  background-color: white;
+  color: black;
+  overflow-y: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+}
+
+th {
+  background-color: yellow;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+}
+
+.selectOption {
+  margin: 30px auto;
+  width: 100%;
+  font-size: 20px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 4px;
+  background: gray;
+}
+
+select {
+  padding: 10px;
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select:hover, select:focus {
+  border-color: #555;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+
+@media screen and (max-width: 1000px) {
+  .filter-section, .graph-section {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .filter-section, .graph-section {
+    width: 100%;
+    left: 0;
+    right: 0
+  }}
